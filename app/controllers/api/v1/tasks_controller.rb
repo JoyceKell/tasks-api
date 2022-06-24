@@ -7,6 +7,10 @@ module Api
 				render json: {status: 'SUCCESS', message:'tasks carregadas', data:tasks},status: :ok
 			end
 
+			def show
+				task = Task.find(params[:id])
+				render json: {status: 'SUCCESS', message:'Loaded task', data:task},status: :ok
+			end
 		end
 	end
 end
