@@ -76,6 +76,8 @@ GEM
       reline (>= 0.2.7)
     digest (3.1.0)
     erubi (1.10.0)
+    faker (2.21.0)
+      i18n (>= 1.8.11, < 2)
     globalid (1.0.0)
       activesupport (>= 5.0)
     i18n (1.10.0)
@@ -91,6 +93,7 @@ GEM
     marcel (1.0.2)
     method_source (1.0.0)
     mini_mime (1.1.2)
+    mini_portile2 (2.8.0)
     minitest (5.16.1)
     msgpack (1.5.2)
     net-imap (0.2.3)
@@ -108,6 +111,9 @@ GEM
       net-protocol
       timeout
     nio4r (2.5.8)
+    nokogiri (1.13.6)
+      mini_portile2 (~> 2.8.0)
+      racc (~> 1.4)
     nokogiri (1.13.6-x86_64-linux)
       racc (~> 1.4)
     pg (1.4.0)
@@ -164,6 +170,7 @@ PLATFORMS
 DEPENDENCIES
   bootsnap
   debug
+  faker
   pg
   puma (~> 5.0)
   rails (~> 7.0.3)

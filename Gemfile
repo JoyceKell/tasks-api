@@ -8,6 +8,8 @@ gem "rails", "~> 7.0.3"
 
 gem 'pg'
 
+gem 'faker'
+
 # Use sqlite3 as the database for Active Record
 gem "sqlite3", "~> 1.4"
 
