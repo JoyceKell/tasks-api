@@ -21,6 +21,21 @@ module Api
 				end
 			end
 
+			def destroy
+				task = Task.find(params[:id])
+				task.destroy
+				render json: {status: 'SUCCESS', message:'Deleted task', data:task},status: :ok
+			end
+
+			def update
+				task = Task.find(params[:id])
+				if task.update(task_parameters)
+					render json: {status: 'SUCCESS', message:'Updated task', data:task},status: :ok
+				else
+					render json: {status: 'ERROR', message:'Tasks not update', data:task.erros},status: :unprocessable_entity
+				end
+			end
+
 			private
 			def task_parameters
 				params.permit(:name, :url_image, :status, :description)
